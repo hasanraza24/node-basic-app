@@ -13,7 +13,9 @@ const envVarsSchema = Joi.object({
   JWT_SECRET: Joi.string().required()
     .description('JWT Secret required to sign'),
   MONGO_URL: Joi.string().required()
-    .description('Mongo DB url')
+    .description('Mongo DB url'),
+  BASE_URL: Joi.string().required()
+    .description('Base Url is required')
 }).unknown()
   .required();
 
@@ -26,7 +28,8 @@ const config = {
   env: envVars.NODE_ENV,
   port: envVars.PORT,
   jwtSecret: envVars.JWT_SECRET,
-  mongoUrl: envVars.MONGO_URL
+  mongoUrl: envVars.MONGO_URL,
+  baseUrl: envVars.BASE_URL
 };
 
 module.exports = config;

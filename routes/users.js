@@ -8,4 +8,8 @@ router.post('/register', validate(userValidation.create), userCtlr.register);
 
 router.post('/login', validate(userValidation.auth), userCtlr.login);
 
+router.post('/forgot-pwd', validate(userValidation.frgPwd), userCtlr.forgotPwd);
+
+router.post('/reset-password', validate(userValidation.auth), userCtlr.resetPassword);
+
 module.exports = router

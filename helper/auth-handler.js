@@ -10,6 +10,14 @@ const excludeUrls = [
   {
       url: '/users/login',
       method: 'POST'
+  },
+  {
+    url: '/users/forgot-pwd',
+    method: 'POST'
+  },
+  {
+    url: '/users/reset-password',
+    method: 'POST'
   }
 ];
 
