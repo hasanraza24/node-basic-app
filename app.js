@@ -38,6 +38,8 @@ app.options('*', (req, res, next) => {
 
 app.use(authHandler);
 
+app.use(express.static(path.join(__dirname, 'build')));
+
 app.use('/api', indexRouter);
 
 app.get('*', (req, res, next) => {
