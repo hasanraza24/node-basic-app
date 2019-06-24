@@ -4,19 +4,19 @@ const config = require('../config/config');
 
 const excludeUrls = [
   {
-     url: '/users/register',
+     url: '/api/users/register',
      method: 'POST',
   },
   {
-      url: '/users/login',
+      url: '/api/users/login',
       method: 'POST'
   },
   {
-    url: '/users/forgot-pwd',
+    url: '/api/users/forgot-pwd',
     method: 'POST'
   },
   {
-    url: '/users/reset-password',
+    url: '/api/users/reset-password',
     method: 'POST'
   }
 ];
