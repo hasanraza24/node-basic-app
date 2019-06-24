@@ -38,7 +38,21 @@ app.options('*', (req, res, next) => {
 
 app.use(authHandler);
 
-app.use('/', indexRouter);
+app.use('/api', indexRouter);
+
+app.get('*', (req, res, next) => {
+  try {
+    if(res.locals['toSend404'] || !res.locals['isHandledByRoute'])
+      res.status(404)
+
+    if(res.locals['toSend301'])
+      res.status(301)
+
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  }catch(e) {
+    next(e);
+  }
+});
 
 //catch errors
 // if error is not an instanceOf APIError, convert it.

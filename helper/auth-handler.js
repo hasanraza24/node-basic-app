@@ -23,7 +23,7 @@ const excludeUrls = [
 
 
 function authHandler(req, res, next) {
-  if (_.find(excludeUrls, { url: req.path, method: req.method })) {
+  if (_.find(excludeUrls, { url: req.path, method: req.method }) || req.method === 'GET' ) {
     return next();
   }
   const jwtMiddleWare = expressJwt({ secret: config.jwtSecret, requestProperty: 'user', getToken });
