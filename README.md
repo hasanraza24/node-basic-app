@@ -1,8 +1,8 @@
-#Node Basic App
+# Node Basic App
 
 Node Basic App is a simple node which can be used as a boilerplate for your node app. 
 
-#Library Used
+## Library Used
 
 Express -> Framework.
 Mongoose -> ODM to connect to MongoDB.
@@ -14,5 +14,5 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-#Here it Live
+## Here it Live
 https://ceegees.herokuapp.com/
